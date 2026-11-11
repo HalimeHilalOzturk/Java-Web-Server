@@ -11,7 +11,7 @@ import java.util.Date;
 
 public class SimpleHttpServer {
 
-    private static final int PORT = 8080;
+    private static final int PORT = 1989;
     private static final String WEB_ROOT = ".";
 
     public static void main(String[] args) {
@@ -76,10 +76,60 @@ public class SimpleHttpServer {
         private void sendDefaultPage(OutputStream out) throws IOException {
             String htmlContent = "<!DOCTYPE html>\n" +
                     "<html lang=\"tr\">\n" +
-                    "<head><meta charset=\"UTF-8\"><title>Java Web Sunucusu</title></head>\n" +
+                    "<head>\n" +
+                    "    <meta charset=\"UTF-8\">\n" +
+                    "    <title>Öğrenci Profil Sayfası</title>\n" +
+                    "    <style>\n" +
+                    "        body {\n" +
+                    "            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n" +
+                    "            background-color: #f4f7f6;\n" +
+                    "            color: #333;\n" +
+                    "            margin: 40px;\n" +
+                    "            line-height: 1.6;\n" +
+                    "        }\n" +
+                    "        .card {\n" +
+                    "            background: #ffffff;\n" +
+                    "            padding: 30px;\n" +
+                    "            border-radius: 12px;\n" +
+                    "            box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n" +
+                    "            max-width: 650px;\n" +
+                    "            margin: 0 auto;\n" +
+                    "            border-top: 6px solid #2c3e50;\n" +
+                    "        }\n" +
+                    "        h1 {\n" +
+                    "            color: #2c3e50;\n" +
+                    "            margin-bottom: 5px;\n" +
+                    "            font-size: 32px;\n" +
+                    "        }\n" +
+                    "        h2 {\n" +
+                    "            color: #e74c3c;\n" +
+                    "            margin-top: 0;\n" +
+                    "            font-weight: 500;\n" +
+                    "            font-size: 22px;\n" +
+                    "        }\n" +
+                    "        p {\n" +
+                    "            font-size: 16px;\n" +
+                    "            color: #555;\n" +
+                    "        }\n" +
+                    "        .badge {\n" +
+                    "            display: inline-block;\n" +
+                    "            background: #3498db;\n" +
+                    "            color: white;\n" +
+                    "            padding: 4px 10px;\n" +
+                    "            border-radius: 4px;\n" +
+                    "            font-size: 13px;\n" +
+                    "            margin-top: 10px;\n" +
+                    "        }\n" +
+                    "    </style>\n" +
+                    "</head>\n" +
                     "<body>\n" +
-                    "   <h1>Java Web Sunucusu Başarıyla Çalışıyor!</h1>\n" +
-                    "   <p>Bu sunucu 3. parti bileşen kullanılmadan tamamen saf Java ile yazılmıştır.</p>\n" +
+                    "    <div class=\"card\">\n" +
+                    "        <h1>Halime Hilal Öztürk</h1>\n" +
+                    "        <h2>1250505050</h2>\n" +
+                    "        <hr style=\"border: 0; border-top: 1px solid #eee; margin: 20px 0;\">\n" +
+                    "        <p><strong>Biyografi:</strong> Kırklareli Üniversitesi Yazılım Mühendisliği 2. sınıf öğrencisiyim. Nesneye Yönelik Programlama ve Web Geliştirme alanlarında projeler üretmekteyim.</p>\n" +
+                    "        <span class=\"badge\">Pure Java HTTP Server</span>\n" +
+                    "    </div>\n" +
                     "</body>\n" +
                     "</html>";
 
