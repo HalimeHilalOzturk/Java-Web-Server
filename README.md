@@ -1,11 +1,17 @@
-# Java Web Sunucusu
+# Java Web Sunucusu (Port: 1989)
 
-Bu proje, harici veya 3. parti hiçbir kütüphane kullanılmadan tamamen saf Java (`java.net.ServerSocket`, `java.io.*`) kullanılarak geliştirilmiş çok iş parçacıklı (multi-threaded) temel bir HTTP Web Sunucusudur.
+Bu proje, harici veya 3. parti hiçbir kütüphane kullanılmadan tamamen saf Java (`java.net.ServerSocket`, `java.io.*`) kullanılarak geliştirilmiş çok iş parçacıklı (multi-threaded) bir HTTP/1.1 Web Sunucusudur.
+
+## Öğrenci Bilgileri
+- **Ad Soyad:** Halime Hilal Öztürk
+- **Öğrenci No:** 1250505050
+- **Ders:** YAZ16203 - Nesneye Yönelik Programlama
 
 ## Özellikler
-- **Saf Java:** Harici bağımlılık (Spring, Tomcat vb.) içermez.
+- **Saf Java:** Harici bağımlılık (Spring, Tomcat, Jetty vb.) içermez.
+- **1989 Portu:** Sunucu varsayılan olarak `1989` numaralı port üzerinden gelen bağlantıları dinler.
 - **Çoklu İstek Desteği:** Her gelen istemci bağlantısı ayrı bir `Thread` üzerinde işlenir.
-- **HTTP/1.1 Desteği:** Temel `GET` isteklerini karşılar, durum kodlarını (`200 OK`, `404 Not Found`, `501 Not Implemented`) ve içerik tiplerini (`HTML`, `CSS`, `JS`, `PNG`, `JPG`) yönetir.
+- **Kişisel Profil Sayfası:** Tarayıcıdan erişildiğinde H1 (Ad Soyad), H2 (Öğrenci No) ve CSS ile biçimlendirilmiş biyografi sayfası sunar.
 
 ## Çalıştırma
 ```bash
